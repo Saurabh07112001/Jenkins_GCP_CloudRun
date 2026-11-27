@@ -16,14 +16,11 @@ pipeline {
         stage('Initialize Pipeline'){
             steps {
                 echo 'Initializing Pipeline ...'
-		sh 'java -version'
-		sh 'mvn -version'
-		echo 'Initializing Pipeline ...'
-        sh 'echo "JAVA_HOME=$JAVA_HOME"'
-        sh 'echo "PATH=$PATH"'
-        sh 'ls -l $JAVA_HOME/bin/java || echo "java NOT FOUND at JAVA_HOME"'
-        sh 'java -version'
-        sh 'mvn -version'
+        		sh 'echo "JAVA_HOME=$JAVA_HOME"'
+        		sh 'echo "PATH=$PATH"'
+        		sh 'ls -l $JAVA_HOME/bin/java || echo "java NOT FOUND at JAVA_HOME"'
+        		sh 'java -version'
+        		sh 'mvn -version'
             }
         }
         stage('Checkout GitHub Codes'){
